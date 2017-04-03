@@ -13,9 +13,13 @@ use Illuminate\Http\Request;
 |
 */
 
-
+//homepage route
 Route::get('/', 'PagesController@home');
+
+//sample about page route
 Route::get('about', 'PagesController@about');
+
+//beer routes
 Route::get('beer', function() {
  //'BeerController@index') {
   $myBeer = [
