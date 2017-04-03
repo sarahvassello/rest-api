@@ -1,45 +1,13 @@
-<!DOCTYPE html>
-<html>
-    <head>
-        <title>Laravel</title>
+@extends('layout')
 
-        <link href="https://fonts.googleapis.com/css?family=Lato:100" rel="stylesheet" type="text/css">
+@section('content')
+  <p>This is where my credits will be. Find me on
+    <a href="https://github.com/sarahvassello/">github</a>
+    or view my <a href="https://sarahmvassello.com">portfolio</a>.
+  </p>
+  <p>
+    Credits to
+    <a href="https://laracasts.com/series/laravel-5-from-scratch/episodes/8">Laracast</a>
+  </p>
 
-        <style>
-            html, body {
-                height: 100%;
-            }
-
-            body {
-                margin: 0;
-                padding: 0;
-                width: 100%;
-                display: table;
-                font-weight: 100;
-                font-family: 'Lato';
-            }
-
-            .container {
-                text-align: center;
-                display: table-cell;
-                vertical-align: middle;
-            }
-
-            .content {
-                text-align: center;
-                display: inline-block;
-            }
-
-            .title {
-                font-size: 96px;
-            }
-        </style>
-    </head>
-    <body>
-        <div class="container">
-            <div class="content">
-                <div class="title">Sarah Vassello</div>
-            </div>
-        </div>
-    </body>
-</html>
+@stop
