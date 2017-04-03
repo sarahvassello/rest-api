@@ -1,5 +1,7 @@
 <?php
 
+use Illuminate\Http\Request;
+
 /*
 |--------------------------------------------------------------------------
 | Application Routes
@@ -11,6 +13,28 @@
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
+
+Route::get('/', 'PagesController@home');
+Route::get('about', 'PagesController@about');
+Route::get('beer', function() {
+ //'BeerController@index') {
+  $myBeer = [
+  [
+    'id' => '0',
+    'name' => 'Citraquenchl',
+    'style' => 'American IPA',
+    'brewery' => 'Heist Brewery'
+  ],
+  [
+    'id' => '1',
+    'name' => 'The Event Horizon',
+    'style' => 'Imperial Stout',
+    'brewery' => 'Olde Hickory Brewery'
+  ]
+];
+return Response::json($myBeer);
+
+});
+Route::get('/beer/{id}', function($id) {
+	  return $id;
 });
