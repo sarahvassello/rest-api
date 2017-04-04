@@ -16,9 +16,6 @@ use Illuminate\Http\Request;
 //homepage route
 Route::get('/', 'PagesController@home');
 
-//sample about page route
-Route::get('about', 'PagesController@about');
-
 //beer routes
 Route::get('beer', function() {
  //'BeerController@index') {
@@ -41,4 +38,8 @@ return Response::json($myBeer);
 });
 Route::get('/beer/{id}', function($id) {
 	  return $id;
+});
+
+Route::post('/beer', function(Request $request) {
+    dd($request->all());
 });
