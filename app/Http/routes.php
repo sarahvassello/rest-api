@@ -24,3 +24,12 @@ Route::post('/beers', 'BeerController@create');
 Route::get('/beers/{id}', 'BeerController@show');
 Route::put('/beers/{id}', 'BeerController@update');
 Route::delete('/beers/{id}', 'BeerController@destroy');
+
+//gross beer single routes
+Route::get('/grosses', 'GrossController@index');
+Route::post('/grosses', 'GrossController@create');
+
+//gross beer collection routes
+Route::get('/grosses/{id}', 'GrossController@show');
+Route::put('/grosses/{id}', 'GrossController@update');
+Route::delete('/grosses/{id}', 'GrossController@destroy');
