@@ -16,30 +16,11 @@ use Illuminate\Http\Request;
 //homepage route
 Route::get('/', 'PagesController@home');
 
-//beer routes
-Route::get('beer', function() {
- //'BeerController@index') {
-  $myBeer = [
-  [
-    'id' => '0',
-    'name' => 'Citraquenchl',
-    'style' => 'American IPA',
-    'brewery' => 'Heist Brewery'
-  ],
-  [
-    'id' => '1',
-    'name' => 'The Event Horizon',
-    'style' => 'Imperial Stout',
-    'brewery' => 'Olde Hickory Brewery'
-  ]
-];
-return Response::json($myBeer);
+//beer wish list single routes
+Route::get('/beers', 'BeerController@index');
+Route::post('/beers', 'BeerController@create');
 
-});
-Route::get('/beer/{id}', function($id) {
-	  return $id;
-});
-
-Route::post('/beer', function(Request $request) {
-    dd($request->all());
-});
+//beer wish list collection routes
+Route::get('/beers/{id}', 'BeerController@show');
+Route::put('/beers/{id}', 'BeerController@update');
+Route::delete('/beers/{id}', 'BeerController@destroy');
