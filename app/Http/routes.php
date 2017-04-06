@@ -33,3 +33,12 @@ Route::post('/grosses', 'GrossController@create');
 Route::get('/grosses/{id}', 'GrossController@show');
 Route::put('/grosses/{id}', 'GrossController@update');
 Route::delete('/grosses/{id}', 'GrossController@destroy');
+
+//great beer single route
+Route::get('/greats', 'GreatController@index');
+Route::post('/greats', 'GreatController@create');
+
+//great beer collection routes
+Route::get('/greats/{id}', 'GreatController@show');
+Route::put('/greats/{id}', 'GreatController@update');
+Route::delete('/greats/{id}', 'GreatController@destroy');
