@@ -29,4 +29,4 @@ And while it's essential to the best of the beer nerds to track their progress, 
 
 #### Link to my Gitbook:
 
-[https://sarahvassello.gitbooks.io/beer-tracker-api/](/h ttps://sarahvassello.gitbooks.io/beer-tracker-api/)
+https://sarahvassello.gitbooks.io/beer-tracker-api/
